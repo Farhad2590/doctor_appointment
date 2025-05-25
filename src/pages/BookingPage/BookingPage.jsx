@@ -7,7 +7,7 @@ const BookingPage = () => {
   const { doctorId } = useParams();
   const [doctor, setDoctor] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState(null);
   const [showBookingForm, setShowBookingForm] = useState(false);
@@ -29,12 +29,10 @@ const BookingPage = () => {
 
         if (foundDoctor) {
           setDoctor(foundDoctor);
-        } else {
-          setError(`Doctor with ID ${doctorId} not found`);
-        }
+        } 
       } catch (err) {
         console.error("Error fetching doctor data:", err);
-        setError(err.message);
+       
       } finally {
         setLoading(false);
       }
@@ -147,7 +145,7 @@ const BookingPage = () => {
     setSelectedDate(null);
     setSelectedTime(null);
     setShowBookingForm(false);
-    toast.success("");
+    toast.success("Booking Successfull");
   };
 
   const handleInputChange = (e) => {
@@ -174,38 +172,7 @@ const BookingPage = () => {
     );
   }
 
-  if (error) {
-    return (
-      <div className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-20">
-          <div className="text-center">
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-              <p className="font-bold">Error loading doctor data</p>
-              <p className="text-sm">{error}</p>
-              <button
-                onClick={() => window.location.reload()}
-                className="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-              >
-                Retry
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
-  if (!doctor) {
-    return (
-      <div className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 md:px-20">
-          <div className="text-center">
-            <p className="text-gray-600">Doctor not found.</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-gray-50 py-20">
@@ -213,13 +180,13 @@ const BookingPage = () => {
         <div className="bg-white rounded-lg shadow-md p-6 mb-6">
           <div className="flex items-center space-x-4">
             <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center">
-              {/* <div className="w-24 h-24 mb-4"> */}
+        
                 <img
                   src={doctor.image}
                   alt={`Dr. ${doctor.name}`}
                   className="w-full h-full rounded-full object-cover border-4 border-cyan-100"
                 />
-              {/* </div> */}
+              
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-800">
