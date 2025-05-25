@@ -125,7 +125,7 @@ const BookingPage = () => {
 
   const handleBookingSubmit = () => {
     if (!bookingData.name || !bookingData.phone || !bookingData.reason) {
-      alert("Please fill in all required fields");
+      toast.error("Please fill in all required fields");
       return;
     }
 
