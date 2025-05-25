@@ -1,0 +1,68 @@
+[
+  {
+    "id": "001",
+    "name": "Dr. John Doe",
+    "org": "Kings London Hospital",
+    "availibility": {
+      "sun": "10:00 AM - 06:00 PM",
+      "wed": "06:00 PM - 09:00 PM"
+    },
+    "image": "../src/assets/doctor1.png",
+    "visitDurationInMin": 15
+  },
+  {
+    "id": "002",
+    "name": "Dr. Devy Shetty",
+    "org": "Lion London Hospital",
+    "availibility": {
+      "sun": "10:00 AM - 06:00 PM",
+      "wed": "06:00 PM - 09:00 PM"
+    },
+    "image": "../src/assets/doctor2.png",
+    "visitDurationInMin": 15
+  },
+  {
+    "id": "003",
+    "name": "Dr. John Doe",
+    "org": "Tiger London Hospital",
+    "availibility": {
+      "sun": "10:00 AM - 06:00 PM",
+      "wed": "06:00 PM - 09:00 PM"
+    },
+    "image": "../src/assets/doctor3.png",
+    "visitDurationInMin": 15
+  },
+  {
+    "id": "004",
+    "name": "Dr. John Doe",
+    "org": "Kings London Hospital",
+    "availibility": {
+      "sun": "10:00 AM - 06:00 PM",
+      "wed": "06:00 PM - 09:00 PM"
+    },
+    "image": "../src/assets/doctor1.png",
+    "visitDurationInMin": 15
+  },
+  {
+    "id": "005",
+    "name": "Dr. Devy Shetty",
+    "org": "Lion London Hospital",
+    "availibility": {
+      "sun": "10:00 AM - 06:00 PM",
+      "wed": "06:00 PM - 09:00 PM"
+    },
+    "image": "../src/assets/doctor2.png",
+    "visitDurationInMin": 15
+  },
+  {
+    "id": "006",
+    "name": "Dr. John Doe",
+    "org": "Tiger London Hospital",
+    "availibility": {
+      "sun": "10:00 AM - 06:00 PM",
+      "wed": "06:00 PM - 09:00 PM"
+    },
+    "image": "../src/assets/doctor3.png",
+    "visitDurationInMin": 15
+  }
+]
